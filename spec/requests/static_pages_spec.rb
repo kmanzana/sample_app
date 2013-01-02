@@ -42,6 +42,14 @@ describe "Static pages" do
     it_should_behave_like "all static pages"
   end
 
+  describe "Apprentice.io Page" do
+    before { visit apprentice_path }
+    let(:heading) { 'Apprentice.io Code Example' }
+    let(:page_title) { 'Apprentice.io' }
+    
+    it_should_behave_like "all static pages"
+  end
+
   it "should have the right links on the layout" do
     visit root_path
     click_link "About"
@@ -55,5 +63,7 @@ describe "Static pages" do
     page.should have_selector 'title', text: full_title('Sign up')
     click_link "sample app"
     page.should have_selector 'title', text: full_title('')
+    click_link "Code Example"
+    page.should have_selector 'title', text: full_title('Apprentice.io')
   end
 end

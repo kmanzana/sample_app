@@ -1,0 +1,24 @@
+<% provide(:title, 'Apprentice.io') %>
+<h1>Apprentice.io Code Example</h1>
+
+<p>This is a little snippit of Ruby code answering a problem from <a href=http://projecteuler.net/>Project Euler</a>, a collection of challenging mathematical/computer programming problems.  The problem states that the prime factors of 13195 are 5, 7, 13 and 29.  Then it asks, what is the largest prime factor of the number 600,851,475,143?  Here is the code to print the answer:<br>
+<br>
+</p>
+<p style="font-family:courier; font-size:0.85em">
+num = 600851475143<br>
+factor = 0<br>
+<br>
+i = 2<br>
+<br>
+while i <= num do<br>
+&nbsp;&nbsp;if num % i == 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while num % i == 0 # for multiple roots<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num = num / i<br>
+&nbsp;&nbsp;&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;&nbsp;&nbsp;factor = i<br>
+&nbsp;&nbsp;end<br>
+&nbsp;&nbsp;i += 1<br>
+end<br>
+<br>
+puts "answer: #{factor}"
+</p>

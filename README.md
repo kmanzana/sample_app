@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/kmanzana/sample_app.png)](https://waffle.io/kmanzana/sample_app)  
 # Ruby on Rails Tutorial: sample application
 
 This is the sample application for
